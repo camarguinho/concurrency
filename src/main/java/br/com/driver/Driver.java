@@ -8,8 +8,11 @@ public class Driver {
         t.start();
         System.out.println("Hi!");*/
 
-        Thread t= new Thread(new RunThread());
+        Thread t = new Thread(new RunThread());
         t.start();
+
+        Thread t2 = new Thread(() -> System.out.println("Im a runnable run method!"));
+        t2.start();
     }
 
 }
